@@ -1,0 +1,14 @@
+const express = require('express')
+const router = express.Router()
+
+const { getRecipe } = require('../db/db')
+
+router.get('/:id', (req, res) => {
+  const id = req.params.id
+  getRecipe(id)
+    .then(recipe => {
+      res.json(recipe)
+    })
+})
+
+module.exports = router

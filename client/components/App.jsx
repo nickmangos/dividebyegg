@@ -1,14 +1,16 @@
-import React, { useState } from 'react'
+import React from 'react'
+import { Likes } from './Likes'
 
 const App = () => {
-  const [count, setCount] = useState(0)
+  // const [count, setCount] = useState(12)
 
   return (
-    <>
-      {count}
-      <h1>Hello World</h1>
-      <button onClick={() => setCount(count + 1)}>Click</button>
-    </>
+    // <>
+    //   <h1>Redux test environment</h1>
+    //   <button onClick={() => setCount(count + 1)}>Click</button>
+    //   {count}
+    // </>
+    <Likes />
   )
 }
 
