@@ -1,0 +1,1 @@
+{"version":3,"file":"styles.css","mappings":";;;AAAA;EACE;AACF,C","sources":["webpack://boilerplate-react-webpack/./client/styles/index.scss"],"sourcesContent":["* {\n  background-color: blue;\n}"],"names":[],"sourceRoot":""}
