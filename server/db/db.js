@@ -19,14 +19,6 @@ function getRecipe (id, db = conn) {
     .first()
 }
 
-function getReview (id, db = conn) {
-  return db('movies')
-    .join('reviews', 'movies.review_id', 'reviews.id')
-    .select('movies.title', 'reviews.review', 'movies.id')
-    .where('movies.id', id)
-    .first()
-}
-
 module.exports = {
   getAllUsers,
   addUser,
