@@ -1,16 +1,12 @@
 import React from 'react'
-import { Likes } from './Likes'
+import { Ingredients } from './Ingredients'
+import '../styles/main.scss'
 
 const App = () => {
   // const [count, setCount] = useState(12)
 
   return (
-    // <>
-    //   <h1>Redux test environment</h1>
-    //   <button onClick={() => setCount(count + 1)}>Click</button>
-    //   {count}
-    // </>
-    <Likes />
+    <Ingredients />
   )
 }
 
