@@ -1,0 +1,30 @@
+
+:root {
+	font-size: 16px;
+}
+
+*, *:before, *:after {
+	box-sizing: border-box;
+}
+
+body{
+	font-family: $font-stack;
+	// font-size: $small;
+	// color: $primary-color;
+}
+
+h3 {
+  font-size: 12px;
+  font-weight: 400;
+}
+
+//Clearfix
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+	clear: both;
+}

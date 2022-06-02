@@ -1,0 +1,39 @@
+$font-stack: Inter, Helvetica, sans-serif;
+
+$bold: 700;
+$semi-bold: 600;
+$medium: 500;
+$regular: 400;
+$light: 300;
+
+$x-large: 		3em;		  //48  
+$large: 		  1.875em;	//30
+$medium: 		  1.5em;		//24
+$medium-alt: 	1.25em;	  //20
+$small: 		  1em;		  //16
+$small-alt:		0.875em;	//14
+$x-small:	    0.75em;	  //12
+$x-small-alt: 0.625em;  //10
+
+
+@mixin for-phone-portrait-only {
+  @media (max-width: 399px) { @content; }
+}
+@mixin for-phone-landscape-up {
+  @media (min-width: 400px) { @content; }
+}
+@mixin for-tablet-portrait-up {
+  @media (min-width: 600px) { @content; }
+}
+@mixin for-tablet-portrait-alt-up {
+  @media (min-width: 760px) { @content; }
+}
+@mixin for-tablet-landscape-up {
+  @media (min-width: 900px) { @content; }
+}
+@mixin for-desktop-up {
+  @media (min-width: 1200px) { @content; }
+}
+@mixin for-big-desktop-up {
+  @media (min-width: 1800px) { @content; }
+}
