@@ -10,6 +10,12 @@ function addUser (user, db = conn) {
   .insert(user)
 }
 
+function deleteUser (id, db = conn) {
+  return db('users')
+  .where('users.id', id)
+  .del()
+}
+
 function getRecipe (id, db = conn) {
   return db('recipes')
     .where('recipes.id', id)
@@ -55,6 +61,7 @@ function getIngredients (id, db = conn) {
 module.exports = {
   getAllUsers,
   addUser,
+  deleteUser,
   getRecipe,
   getIngredients
 }

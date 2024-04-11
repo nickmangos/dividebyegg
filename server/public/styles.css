@@ -342,6 +342,9 @@ template {
 
 :root {
   font-size: 16px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 *, *:before, *:after {
@@ -349,7 +352,8 @@ template {
 }
 
 body {
-  font-family: Inter, Helvetica, sans-serif;
+  font-family: Manrope, Inter, Helvetica, sans-serif;
+  background-color: #f5f5f5;
 }
 
 h3 {
@@ -373,6 +377,7 @@ h3 {
   display: flex;
   justify-content: space-between;
   margin-bottom: 8px;
+  max-width: 300px;
 }
 
 .ingredient__name {
@@ -390,7 +395,7 @@ h3 {
 
 .ingredient__quantity {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   min-width: 80px;
   padding: 0 8px;
   border: 1px solid black;
@@ -407,6 +412,151 @@ h3 {
 .ingredient__unit {
   padding-left: 0.2em;
   pointer-events: none;
+}
+
+.ingredients {
+  margin: 10px;
+}
+
+.Recipe {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto 0 auto;
+  height: 100%;
+  color: #000;
+}
+
+.Recipe h1 {
+  font-size: 1.875em;
+  font-weight: 700;
+  margin: 0 20px;
+  letter-spacing: -0.04em;
+}
+
+.Ingredients {
+  position: relative;
+  margin: 40px 20px 0 20px;
+  background-color: #fff;
+  height: 180px;
+  overflow: hidden;
+  border-radius: 8px;
+  max-width: 400px;
+}
+
+.Ingredients::after {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  content: "";
+  background: linear-gradient(rgba(255, 255, 255, 0), #fff);
+}
+
+.Ingredients ul {
+  list-style-type: none;
+  padding: 16px;
+  margin: 0;
+}
+
+.Ingredients li {
+  font-size: 1em;
+  font-weight: 1.5em;
+  line-height: 2.5em;
+}
+
+.Ingredients li span {
+  font-weight: 700;
+  float: right;
+}
+
+.IngredientsExpanded {
+  position: fixed;
+  background-color: #fff;
+  border-radius: 24px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  transition: all 0.5s ease-out;
+}
+
+.Directions {
+  margin: 40px 20px 0 20px;
+  max-width: 400px;
+}
+
+.Directions p {
+  font-size: 1.25em;
+  font-weight: 400;
+  line-height: 1.4em;
+  padding-bottom: 2em;
+  margin: 0;
+}
+
+.InfoPane {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  margin: 100px 20px 0 20px;
+  max-width: 400px;
+}
+
+.InfoPane div {
+  background-color: white;
+  flex: 1 1 0;
+  border-radius: 8px;
+  padding: 20px 0;
+  position: relative;
+}
+
+.InfoPane p {
+  font-size: 1.25em;
+  font-weight: 700;
+  text-align: center;
+}
+
+.InfoPane .InfoPane__Label {
+  font-size: 0.625em;
+  color: #999999;
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
+}
+
+.InfoPane .time-unit {
+  font-size: 0.75em;
+  color: #000000;
+}
+
+.Footer {
+  margin: 40px 20px 0 20px;
+  max-width: 400px;
+  height: 80px;
+}
+
+.Origin {
+  height: 28px;
+  width: 60px;
+  background-color: white;
+  border-radius: 14px;
+  margin: 100px 0 10px 20px;
+}
+
+.Navbar {
+  color: black;
+  padding: 0 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 3rem;
+  top: 0;
+  left: 0;
+  right: 0;
 }
 
 /*# sourceMappingURL=styles.css.map*/

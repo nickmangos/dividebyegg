@@ -5,6 +5,7 @@ export function Ingredient(props) {
     <div className="ingredient">
       <div className="ingredient__name">
         <h3>{props.name}</h3>
+        <h4>{props.note}</h4>
       </div>
       <div className="ingredient__quantity">
         <h3 className="ingredient__amount">{props.quantity}</h3>

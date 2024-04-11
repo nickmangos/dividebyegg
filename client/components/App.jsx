@@ -1,12 +1,16 @@
 import React from 'react'
-import { Ingredients } from './Ingredients'
+import { Recipe } from './Recipe'
+import { Navbar } from './Navbar'
 import '../styles/main.scss'
 
 const App = () => {
   // const [count, setCount] = useState(12)
 
   return (
-    <Ingredients />
+    <>
+      <Navbar />
+      <Recipe />
+    </>
   )
 }
 

@@ -4,7 +4,9 @@ exports.up = (knex) => {
       table.increments('id')
       table.string('name')
       table.int('calories')
+      table.int('density')
       table.string('default_measurement')
+      table.string('origin')
     })
 }
 

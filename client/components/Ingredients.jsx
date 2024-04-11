@@ -1,34 +1,24 @@
-import React, { useEffect, useState } from 'react'
-import { useParams } from 'react-router'
-import { Ingredient } from './Ingredient'
-// import { fetchIngredients } from '../apis/recipes'
+import React, { useState } from 'react';
 
 export function Ingredients() {
-
-  const [ingredients, setIngredients] = useState([])
-  // const { id } = useParams() // Need for recipe ID?
-
-  useEffect(() => {
-    fetch('http://localhost:3000/api/v1/recipes/ingredients/3')
-      .then(res => res.json())
-      .then(result => {
-        setIngredients(result)
-        console.log(result)
-        return null
-      })
-      .catch(((error) => console.log(error)))
-  }, [])
-
+  const [isExpanded, setIsExpanded] = useState(false);
+  const handleDivClick = () => {
+    setIsExpanded(!isExpanded);
+  };
+  
   return (
-    <div>
-      {ingredients.map(result =>
-        <Ingredient 
-          key={result?.list_order}
-          name={result?.name || result?.user_defined}
-          quantity={result?.quantity}
-          measurement={result?.measurement || result?.default_measurement}
-        />
-      )}
+    <div className={isExpanded ? 'IngredientsExpanded' : 'Ingredients'} onClick={handleDivClick}>
+      <ul>
+        <li>Salted Butter<span>120 g</span></li>
+        <li>Light Brown Sugar<span>75 g</span></li>
+        <li>Granuated Sugar<span>75 g</span></li>
+        <li>Vanilla Extract<span>1/2 tsp</span></li>
+        <li>Egg<span></span>1</li>
+        <li>Plain Flour<span>240 g</span></li>
+        <li>Bicarbonate of Soda<span>1/2 tsp</span></li>
+        <li>Dark Chocolate<span>170 g</span></li>
+        <li>Sea Salt Flakes<span>-</span></li>
+      </ul>
     </div>
   )
 }

@@ -6,6 +6,7 @@ exports.up = (knex) => {
       table.integer('servings')
       table.integer('preperation_time')
       table.integer('cooking_time')
+      table.text('instructions')
       table.integer('user_id')
       table.boolean('public')
       table.timestamps(false, true)
